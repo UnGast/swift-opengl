@@ -17,7 +17,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 public
-enum GL
+enum GLMap
 {
     // note: GL.Int is Swift.Int32, not Swift.Int, and
     //       GL.UInt is Swift.UInt32, not Swift.UInt
