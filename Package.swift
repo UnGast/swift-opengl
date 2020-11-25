@@ -1,6 +1,12 @@
 // swift-tools-version:5.0
 import PackageDescription
 
+#if canImport(Darwin)
+let linkedGl = LinkerSetting.linkedFramework("OpenGl")
+#else
+let linkedGl = LinkerSetting.linkedLibrary("gl")
+#endif
+
 let package = Package(
     name: "GL",
     products: [
@@ -13,7 +19,7 @@ let package = Package(
             name: "GL",
             dependencies: [],
             path: "sources/opengl",
-            linkerSettings: [.linkedFramework("gl")]),
+            linkerSettings: [linkedGl]),
         .target(
             name: "generator",
             dependencies: ["XML"],
