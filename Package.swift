@@ -4,7 +4,7 @@ import PackageDescription
 #if canImport(Darwin)
 let linkedGl = LinkerSetting.linkedFramework("OpenGl")
 #else
-let linkedGl = LinkerSetting.linkedLibrary("gl")
+let linkedGl = LinkerSetting.linkedLibrary("GL")
 #endif
 
 let package = Package(
